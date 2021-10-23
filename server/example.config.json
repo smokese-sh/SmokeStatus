@@ -1,0 +1,7 @@
+{
+    "domain": "https://smokese.sh",
+    "port": 80,
+    "tests": ["/api/v1/videos/all", "/", ""],
+    "mongoUri": ""
+  }
+  
