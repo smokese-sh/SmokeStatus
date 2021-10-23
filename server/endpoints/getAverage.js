@@ -48,7 +48,12 @@ module.exports = class getAverage {
         array.filter(
           (data) => new Date(data).toDateString() === new Date().toDateString()
         );
-        res.json({ data: array });
+        res.json({
+            data: array.map((data) => ({
+              time: data._id,
+              average: data.averageRes,
+            })),
+          });
         break;
     }
   }
