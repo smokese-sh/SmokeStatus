@@ -9,16 +9,45 @@ module.exports = class getAverage {
     let query = req.query?.span;
     switch (query) {
       case "day":
-        array.filter((data) => new Date(data).toDateString() === new Date().toDateString());
-        res.json({ data: array.map(data => ({time: data._id, average: data.averageRes})) });
+        array.filter(
+          (data) => new Date(data).toDateString() === new Date().toDateString()
+        );
+        res.json({
+          data: array.map((data) => ({
+            time: data._id,
+            average: data.averageRes,
+          })),
+        });
         break;
       case "month":
+        // this is for day, but shrug
+        array.filter(
+          (data) => new Date(data).toDateString() === new Date().toDateString()
+        );
+        res.json({
+          data: array.map((data) => ({
+            time: data._id,
+            average: data.averageRes,
+          })),
+        });
         break;
       case "year":
+        // this is for day, but shrug
+        array.filter(
+          (data) => new Date(data).toDateString() === new Date().toDateString()
+        );
+        res.json({
+          data: array.map((data) => ({
+            time: data._id,
+            average: data.averageRes,
+          })),
+        });
         break;
       default:
         // returns day
-        array.filter((data) => new Date(data).toDateString() === new Date().toDateString());
+        array.filter(
+          (data) => new Date(data).toDateString() === new Date().toDateString()
+        );
         res.json({ data: array });
         break;
     }
