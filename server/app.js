@@ -16,11 +16,11 @@ class SmokeStatus {
       });
 
     this.loadEndpoints();
-    app.listen(80);
+    app.listen(config.serverPort);
     new CronJob(
       "0 */15 * * * *",
       () => {
-        this.testEndpoints();
+        this.testEndpointResponse();
       },
       null,
       true,
@@ -37,7 +37,7 @@ class SmokeStatus {
     }
   }
 
-  async testEndpoints() {
+  async testEndpointResponse() {
     let tests = [];
     const request = (url) => {
       return new Promise((resolve, reject) => {
