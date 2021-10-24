@@ -25,6 +25,7 @@ export default function apiTime() {
   const axes = useMemo(
     () => [
       { primary: true, type: "linear", position: "bottom" },
+      { type: "linear", position: "left" },
     ],
     []
   );
