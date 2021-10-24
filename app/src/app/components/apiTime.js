@@ -9,7 +9,7 @@ export default function apiTime() {
     fetch("https://status.smokese.sh/api/v1/getaverage", {method: "GET", headers: {"Content-Type": "application/json"}})
       .then((r) => r.json())
       .then((r) => {
-        setApiData(r.data.reverse().map((key, index) => [index, key.average]));
+        setApiData(r.data.reverse().map((key, index) => [new Date(key.time), key.average]));
       });
   }, []);
   console.log(apiData);
@@ -17,7 +17,7 @@ export default function apiTime() {
 
   const axes = useMemo(
     () => [
-      { primary: true, type: "linear", position: "bottom" },
+      { primary: true, type: "time", position: "bottom" },
       { type: "linear", position: "left" },
     ],
     []
