@@ -16,7 +16,7 @@ export default function apiTime() {
     () => [
       {
         label: "Series 1",
-        data: apiData,
+        data: [...apiData],
       }
     ],
     []
@@ -25,7 +25,6 @@ export default function apiTime() {
   const axes = useMemo(
     () => [
       { primary: true, type: "linear", position: "bottom" },
-      { type: "linear", position: "left" },
     ],
     []
   );
