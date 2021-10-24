@@ -13,15 +13,7 @@ export default function apiTime() {
       });
   }, []);
   console.log(apiData);
-  const data = useMemo(
-    () => [
-      {
-        label: "Series 1",
-        data: [...apiData],
-      }
-    ],
-    []
-  );
+  const data = [{label: "Response Times", data: [...apiData]}]
 
   const axes = useMemo(
     () => [
