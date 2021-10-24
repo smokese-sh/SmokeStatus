@@ -10,9 +10,9 @@ export default function apiTime() {
       .then((r) => r.json())
       .then((r) => {
         setApiData(r.data.map((key, index) => [index, key.average]));
-        console.log(apiData);
       });
   }, []);
+  console.log(apiData);
   const data = useMemo(
     () => [
       {
