@@ -24,7 +24,7 @@ export default function apiTime() {
   );
   return (
     <div className="apiContainer">
-      <Chart data={data} axes={axes} />
+      <Chart className="chart" data={data} axes={axes} tooltip />
     </div>
   );
 }
