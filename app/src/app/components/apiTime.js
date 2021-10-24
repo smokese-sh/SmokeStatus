@@ -12,6 +12,7 @@ export default function apiTime() {
         setApiData(r.data.reverse().map((key, index) => [index, key.average]));
       });
   }, []);
+  console.log(apiData);
   const data = useMemo(
     () => [
       {
