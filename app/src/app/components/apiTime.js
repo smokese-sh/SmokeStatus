@@ -6,7 +6,7 @@ export default function apiTime() {
   const [apiData, setApiData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:42069/api/v1/getaverage", {method: "GET", headers: {"Content-Type": "application/json"}})
+    fetch("https://status.smokese.sh/api/v1/getaverage", {method: "GET", headers: {"Content-Type": "application/json"}})
       .then((r) => r.json())
       .then((r) => {
         setApiData(r.data.map((key, index) => [index, key.average]));
