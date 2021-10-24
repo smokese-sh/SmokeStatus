@@ -1,0 +1,44 @@
+:root {
+    --dark-blue: #001A23;
+    --smoke-green: #B3EFB2
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Ubuntu'), url(http://example.com/fonts/ubuntu.woff) format('woff');
+}
+
+body, #base, html {
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+    height: 100%;
+    font-family: "Ubuntu";
+}
+
+.bannerDiv {
+    background-color: var(--dark-blue);
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.bannerText {
+    line-height: 113px;
+    height: 113px;
+    margin-left: 20px!important;
+    color: var(--smoke-green);
+    font-size: 48px;
+    margin: 0px;
+    font-family: "Ubuntu";
+}
+
+.Data {
+    width: 90%;
+    margin-left: 5%;
+}

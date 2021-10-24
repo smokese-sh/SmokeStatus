@@ -16,7 +16,8 @@ class SmokeStatus {
       });
 
     this.loadEndpoints();
-    app.listen(config.serverPort);
+
+    this.app.listen(config.serverPort);
     new CronJob(
       "0 */15 * * * *",
       () => {

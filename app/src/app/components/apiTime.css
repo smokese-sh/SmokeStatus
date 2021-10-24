@@ -1,0 +1,6 @@
+.apiContainer {
+    border: 1.4px solid rgba(0,0,0,.25);
+    padding: 10px;
+    height: 150px;
+    border-radius: 5px;
+}

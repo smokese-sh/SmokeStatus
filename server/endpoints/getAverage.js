@@ -7,6 +7,7 @@ module.exports = class getAverage {
   async run(req, res) {
     const array = await this.app.collection.find().toArray();
     let query = req.query?.span;
+
     switch (query) {
       case "day":
         array.filter(

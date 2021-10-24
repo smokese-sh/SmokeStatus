@@ -1,3 +1,5 @@
 node_modules
 config.json
 package-lock.json
+app/src/server/dist/*
+!app/src/server/dist/.exists
