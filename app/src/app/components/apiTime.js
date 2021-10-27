@@ -6,14 +6,21 @@ export default function apiTime() {
   const [apiData, setApiData] = useState([]);
 
   useEffect(() => {
-    fetch("https://status.smokese.sh/api/v1/getaverage", {method: "GET", headers: {"Content-Type": "application/json"}})
+    fetch("https://status.smokese.sh/api/v1/getaverage", {
+      method: "GET",
+      headers: { "Content-Type": "application/json" },
+    })
       .then((r) => r.json())
       .then((r) => {
-        setApiData(r.data.reverse().map((key, index) => [index, key.average]));
+        setApiData(
+          r.data
+            .reverse()
+            .map((key) => ({ date: new Date(key.time), response: key.average }))
+        );
       });
   }, []);
   console.log(apiData);
-  const data = [{label: "Response Time", data: [...apiData]}]
+  const data = [{ label: "Response Time", data: [...apiData] }];
 
   const axes = useMemo(
     () => [
